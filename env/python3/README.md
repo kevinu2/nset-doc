@@ -1,13 +1,14 @@
 ## Install compiler
 `yum -y install gcc make`
 
-## Install dependent packages
+## Install dependent packagesCancel changes
 `yum -y install readline readline-devel zlib-devel libffi-devel openssl-devel`
 
 ## Donwload python source code
-`wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz`<br />
-`tar zxf Python-3.7.7.tgz`<br />
-`cd Python-3.7.7`
+py_version=3.9.4
+`wget https://www.python.org/ftp/python/${py_version}/Python-${py_version}.tgz`<br />
+`tar zxf Python-${py_version}.tgz`<br />
+`cd Python-${py_version}`
 
 ## Configure, make & make install
 `./configure --prefix=/opt/nset/py3 --enable-optimizations --with-ssl`<br />
