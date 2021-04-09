@@ -6,8 +6,8 @@
 
 ## Donwload python source code
 `py_version=3.9.4`<br />
-`wget https://www.python.org/ftp/python/${py_version}/Python-${py_version}.tgz`<br />
-`tar zxf Python-${py_version}.tgz`<br />
+`wget https://www.python.org/ftp/python/${py_version}/Python-${py_version}.tar.xz`<br />
+`tar Jxf Python-${py_version}.tar.xz`<br />
 `cd Python-${py_version}`
 
 ## Configure, make & make install
