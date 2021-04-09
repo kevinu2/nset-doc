@@ -1,22 +1,39 @@
 ## Install compiler
 `yum -y install gcc make`
 
-## Install dependent packagesCancel changes
-`yum -y install readline readline-devel zlib-devel libffi-devel openssl-devel`
+## Install dependent packages
+`yum -y install readline readline-devel zlib-devel libffi-devel openssl-devel bzip2-devel libuuid-devel sqlite-devel xz-devel gdbm-devel tk-devel`
 
 ## Donwload python source code
-`py_version=3.9.4`<br />
-`wget https://www.python.org/ftp/python/${py_version}/Python-${py_version}.tar.xz`<br />
-`tar Jxf Python-${py_version}.tar.xz`<br />
-`cd Python-${py_version}`
+`version=3.9.1`<br />
+`wget  https://www.python.org/ftp/python/${version}/Python-${version}.tar.xz`<br />
+`tar Jxf Python-${version}.tar.xz`<br />
+`cd Python-${version}`
 
 ## Configure, make & make install
-`./configure --prefix=/opt/nset/py3 --enable-optimizations`<br />
+`path=/opt/nset/py3`<br />
+`./configure --prefix=${path} --enable-optimization`<br />
 `make; make install`<br />
 
 ## Init bin path
-`alternatives --install /usr/bin/python3 python3 /opt/nset/py3/bin/python3 0`<br />
-`alternatives --install /usr/bin/pip3 pip3 /opt/nset/py3/bin/pip3 0`<br />
+`version=3.9.4`<br />
+`v=${version%%.*}`<br />
+`vv=${version%.*}`<br />
+`path=/opt/nset/py3`<br />
+`alternatives --install /usr/bin/python${v} python${v} ${path}/bin/python${v} 0`<br />
+`alternatives --install /usr/bin/pip${v} pip${v} ${path}/bin/pip${v}`<br />
+`alternatives --install /usr/bin/python${vv} python${vv} ${path}/bin/python${vv} 0`<br />
+`alternatives --install /usr/bin/pip${vv} pip${vv} ${path}/bin/pip${vv} 0`<br />
+
+## Change install source
+`mkdir -p ~/.pip`<br />
+`cat > ~/.pip/pip.conf << EOF`<br />
+`[global]`<br />
+`index-url = https://mirrors.aliyun.com/pypi/simple/`<br />
+<br />
+`[install]`<br />
+`trusted-host=mirrors.aliyun.com`<br />
+`EOF`<br />
 
 ## Upgrade pip
-`pip3 install --upgrade pip`
+`pip3 install --upgrade pip`<br />
