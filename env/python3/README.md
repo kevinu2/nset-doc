@@ -11,7 +11,7 @@
 `cd Python-${py_version}`
 
 ## Configure, make & make install
-`./configure --prefix=/opt/nset/py3 --enable-optimizations --with-ssl`<br />
+`./configure --prefix=/opt/nset/py3 --enable-optimizations`<br />
 `make; make install`<br />
 
 ## Init bin path
