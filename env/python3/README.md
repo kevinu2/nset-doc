@@ -5,7 +5,7 @@
 `yum -y install readline readline-devel zlib-devel libffi-devel openssl-devel bzip2-devel libuuid-devel sqlite-devel xz-devel gdbm-devel tk-devel`
 
 ## Donwload python source code
-`version=3.9.1`<br />
+`version=3.9.4`<br />
 `wget  https://www.python.org/ftp/python/${version}/Python-${version}.tar.xz`<br />
 `tar Jxf Python-${version}.tar.xz`<br />
 `cd Python-${version}`
