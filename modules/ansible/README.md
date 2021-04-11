@@ -2,23 +2,15 @@
 <https://github.com/kevinu2/nset-doc/tree/master/env/ansible>
 
 ## Download 'nset-modules-ansible'
+`cd /opt`<br />
 `git clone https://github.com/kevinu2/nset-ansible.git`<br />
 `cd nset-modules-ansible`
 
-## Replace the PATH of 'ansbile-playbook' in ['launch.sh'](https://github.com/kevinu2/nset-ansible/blob/master/launch.sh)
-`vim launch.sh`
-```
-#!/bin/bash
-#ANSIBLE='/opt/python/bin/ansible-playbook'
-ANSIBLE='/opt/nset/py3/bin/ansible-playbook'
-WORKDIR=`realpath $(dirname $0)`
-op=${1}
-shift
-...
-```
+## Use ['nset-cli'](https://github.com/kevinu2/nsett-cli)
 
-#### Opt 1. Setup hosts in ['inventory.all'](https://github.com/kevinu2/nset-ansible/blob/master/inventory.all)
-`vim inventory.all`
+#### Opt 1. Setup hosts in ['inventory.ini'](https://github.com/kevinu2/nset-ansible/blob/master/inventory.ini.example)
+`cp inventory.ini.example inventory.ini`
+`vim inventory.ini`
 ```
 [ntp_local]
 s1.nset
@@ -60,17 +52,11 @@ deploy_data_path: "/home/data"
 ceph_devices:
   - /dev/sdb 
 elasticsearch_admin_user: 'es'
-elasticsearch_admin_password: 'QJrqSf7amftxpVjG'
+elasticsearch_admin_password: 'yourpassword'
 ```
 
-## Start the progress with ['launch.sh'](https://github.com/kevinu2/nset-ansible/blob/master/launch.sh)
+## Start the progress with ['nset-cli'](https://github.com/kevinu2/nset-cli)
 #### Install single module
-`./launch.sh install ntp`
+`./nset-cli install -m ntp`
 #### Install multiple modules one by one
-`./launch.sh install ntp dnsmasq`
-#### For config only
-`./launch.sh config ntp`
-#### For download only
-`./launch.sh download ntp`
-#### Install without config and download
-`./launch.sh deploy ntp`
+`./nset-cli install -m ntp,dnsmasq`
