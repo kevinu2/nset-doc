@@ -19,6 +19,11 @@
 `python3 setup.py install`
 
 ## Change default python env
-`path=/opt/nset/py3`<br />
-`site_pkgs=${path}/lib/python3.9/site-packages`<br />
-`find ${site_pkgs} -name "*.py" -exec sed -i 's#/usr/bin/python#${path}/bin/python3#g' {} \;`
+```
+for py in `find /opt/nset/py3/lib/python3.9/site-packages -type f -name "*.py*"`; do
+  if [ `grep '/usr/bin/python' $py -c` -gt 0 ]; then
+    echo $py
+    sed -i 's@/usr/bin/python@/opt/nset/py3/bin/python3@g' $py
+  fi
+done
+```
