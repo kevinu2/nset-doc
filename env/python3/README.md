@@ -12,7 +12,7 @@
 
 ## Configure, make & make install
 `path=/opt/nset/py3`<br />
-`./configure --prefix=${path} --enable-optimizations`<br />
+`./configure --prefix=${path}`<br />
 `make; make install`<br />
 
 ## Init bin path
