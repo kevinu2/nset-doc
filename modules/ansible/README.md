@@ -6,7 +6,7 @@
 `git clone https://github.com/kevinu2/nset-ansible.git`<br />
 `cd nset-modules-ansible`
 
-## Use ['nset-cli'](https://github.com/kevinu2/nsett-cli)
+## Use ['nset-cli'](https://github.com/kevinu2/nset-cli)
 
 #### Opt 1. Setup hosts in ['inventory.ini'](https://github.com/kevinu2/nset-ansible/blob/master/inventory.ini.example)
 `cp inventory.ini.example inventory.ini`
