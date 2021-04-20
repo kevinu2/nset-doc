@@ -21,7 +21,7 @@
 `vv=${version%.*}`<br />
 `path=/opt/nset/py3`<br />
 `alternatives --install /usr/bin/python${v} python${v} ${path}/bin/python${v} 0`<br />
-`alternatives --install /usr/bin/pip${v} pip${v} ${path}/bin/pip${v}`<br />
+`alternatives --install /usr/bin/pip${v} pip${v} ${path}/bin/pip${v} 0`<br />
 `alternatives --install /usr/bin/python${vv} python${vv} ${path}/bin/python${vv} 0`<br />
 `alternatives --install /usr/bin/pip${vv} pip${vv} ${path}/bin/pip${vv} 0`<br />
 
