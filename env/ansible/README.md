@@ -2,8 +2,8 @@
 <https://github.com/kevinu2/nset-doc/tree/master/env/python3>
 
 ## Install ansible
-`path=/opt/nset/py3`<br />
-`pip3 install ansible`<br />
+`path=/opt/nset/py3<br />`
+`pip3 install ansible<br />`
 `alternatives --install /usr/local/bin/ansible-playbook ansible-playbook ${path}/bin/ansible-playbook 0<br />`
 `alternatives --install /usr/local/bin/ansible ansible ${path}/bin/ansible 0`
 
