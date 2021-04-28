@@ -4,8 +4,8 @@
 ## Install ansible
 `path=/opt/nset/py3`<br />
 `pip3 install ansible`<br />
-`alternatives --install /usr/bin/ansible-playbook ansible-playbook ${path}/bin/ansible-playbook 0`<br />
-`alternatives --install /usr/bin/ansible ansible ${path}/bin/ansible 0`
+`alternatives --install /usr/bin/local/ansible-playbook ansible-playbook ${path}/bin/ansible-playbook 0`<br />
+`alternatives --install /usr/bin/local/ansible ansible ${path}/bin/ansible 0`
 
 ## Install module for K8S
 `pip3 install openshift`
