@@ -1,11 +1,24 @@
 ## Install compiler
-`yum -y install gcc make`
+Debian
+```
+apt-get -y install gcc make
+```
+CentOS
+```
+yum -y install gcc make
+```
 
 ## Install dependent packages
-`yum -y install readline readline-devel zlib-devel libffi-devel openssl-devel bzip2-devel libuuid-devel sqlite-devel xz-devel gdbm-devel tk-devel`
-
+Debian
+```
+apt-get -y install libreadline-dev zlib1g-dev libffi-dev libssl-dev uuid-dev libgdbm-dev tk-dev libsqlite3-dev libbz2-dev liblzma-dev
+```
+CentOS
+```
+yum -y install readline readline-devel zlib-devel libffi-devel openssl-devel bzip2-devel libuuid-devel sqlite-devel xz-devel gdbm-devel tk-devel
+```
 ## Donwload python source code
-`version=3.9.4`<br />
+`version=3.9.5`<br />
 `wget  https://www.python.org/ftp/python/${version}/Python-${version}.tar.xz`<br />
 `tar Jxf Python-${version}.tar.xz`<br />
 `cd Python-${version}`
@@ -16,7 +29,7 @@
 `make; make install`<br />
 
 ## Init bin path
-`version=3.9.4`<br />
+`version=3.9.5`<br />
 `v=${version%%.*}`<br />
 `vv=${version%.*}`<br />
 `path=/opt/nset/py3`<br />
