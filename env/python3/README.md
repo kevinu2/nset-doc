@@ -38,10 +38,20 @@ version=3.9.5
 v=${version%%.*}
 vv=${version%.*}
 path=/opt/nset/py3
+```
+CentOS
+```
 alternatives --install /usr/local/bin/python${v} python${v} ${path}/bin/python${v} 0
 alternatives --install /usr/local/bin/pip${v} pip${v} ${path}/bin/pip${v} 0
 alternatives --install /usr/local/bin/python${vv} python${vv} ${path}/bin/python${vv} 0
 alternatives --install /usr/local/bin/pip${vv} pip${vv} ${path}/bin/pip${vv} 0
+```
+Debian
+```
+update-alternatives --install /usr/local/bin/python${v} python${v} ${path}/bin/python${v} 0
+update-alternatives --install /usr/local/bin/pip${v} pip${v} ${path}/bin/pip${v} 0
+update-alternatives --install /usr/local/bin/python${vv} python${vv} ${path}/bin/python${vv} 0
+update-alternatives --install /usr/local/bin/pip${vv} pip${vv} ${path}/bin/pip${vv} 0
 ```
 
 ## Change install source
