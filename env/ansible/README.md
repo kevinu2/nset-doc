@@ -5,20 +5,34 @@
 ```
 path=/opt/nset/py3
 pip3 install ansible
+```
+CentOS
+```
 alternatives --install /usr/local/bin/ansible-playbook ansible-playbook ${path}/bin/ansible-playbook 0
 alternatives --install /usr/local/bin/ansible ansible ${path}/bin/ansible 0
 ```
+Debian
+```
+update-alternatives --install /usr/local/bin/ansible-playbook ansible-playbook ${path}/bin/ansible-playbook 0
+update-alternatives --install /usr/local/bin/ansible ansible ${path}/bin/ansible 0
+```
 
 ## Install module for K8S
-`pip3 install openshift`
+```
+pip3 install openshift
+```
 
 ## Install module for ETCD
-`pip3 install etcd3`
+```
+pip3 install etcd3
+```
 
 ## Install pssh
-`git clone https://github.com/lilydjwg/pssh.git`<br />
-`cd pssh`<br />
-`python3 setup.py install`
+```
+git clone https://github.com/lilydjwg/pssh.git
+cd pssh
+python3 setup.py install
+```
 
 ## Change default python env
 ```
