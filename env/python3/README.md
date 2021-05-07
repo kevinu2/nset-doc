@@ -18,35 +18,45 @@ CentOS
 yum -y install readline readline-devel zlib-devel libffi-devel openssl-devel bzip2-devel libuuid-devel sqlite-devel xz-devel gdbm-devel tk-devel
 ```
 ## Donwload python source code
-`version=3.9.5`<br />
-`wget  https://www.python.org/ftp/python/${version}/Python-${version}.tar.xz`<br />
-`tar Jxf Python-${version}.tar.xz`<br />
-`cd Python-${version}`
+```
+version=3.9.5
+wget  https://www.python.org/ftp/python/${version}/Python-${version}.tar.xz
+tar Jxf Python-${version}.tar.xz
+cd Python-${version}
+```
 
 ## Configure, make & make install
-`path=/opt/nset/py3`<br />
-`./configure --prefix=${path}`<br />
-`make; make install`<br />
+```
+path=/opt/nset/py3
+./configure --prefix=${path}
+make; make install
+```
 
 ## Init bin path
-`version=3.9.5`<br />
-`v=${version%%.*}`<br />
-`vv=${version%.*}`<br />
-`path=/opt/nset/py3`<br />
-`alternatives --install /usr/local/bin/python${v} python${v} ${path}/bin/python${v} 0`<br />
-`alternatives --install /usr/local/bin/pip${v} pip${v} ${path}/bin/pip${v} 0`<br />
-`alternatives --install /usr/local/bin/python${vv} python${vv} ${path}/bin/python${vv} 0`<br />
-`alternatives --install /usr/local/bin/pip${vv} pip${vv} ${path}/bin/pip${vv} 0`<br />
+```
+version=3.9.5
+v=${version%%.*}
+vv=${version%.*}
+path=/opt/nset/py3
+alternatives --install /usr/local/bin/python${v} python${v} ${path}/bin/python${v} 0
+alternatives --install /usr/local/bin/pip${v} pip${v} ${path}/bin/pip${v} 0
+alternatives --install /usr/local/bin/python${vv} python${vv} ${path}/bin/python${vv} 0
+alternatives --install /usr/local/bin/pip${vv} pip${vv} ${path}/bin/pip${vv} 0
+```
 
 ## Change install source
-`mkdir -p ~/.pip`<br />
-`cat > ~/.pip/pip.conf << EOF`<br />
-`[global]`<br />
-`index-url = https://mirrors.aliyun.com/pypi/simple/`<br />
-<br />
-`[install]`<br />
-`trusted-host=mirrors.aliyun.com`<br />
-`EOF`<br />
+```
+mkdir -p ~/.pip
+cat > ~/.pip/pip.conf << EOF
+[global]
+index-url = https://mirrors.aliyun.com/pypi/simple/
+
+[install]
+trusted-host=mirrors.aliyun.com
+EOF
+```
 
 ## Upgrade pip
-`pip3 install --upgrade pip`<br />
+```
+pip3 install --upgrade pip
+```
