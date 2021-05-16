@@ -10,7 +10,7 @@ CentOS
 alternatives --install /usr/local/bin/ansible-playbook ansible-playbook ${path}/bin/ansible-playbook 0
 alternatives --install /usr/local/bin/ansible ansible ${path}/bin/ansible 0
 ```
-Debian
+Debian/Ubuntu
 ```
 update-alternatives --install /usr/local/bin/ansible-playbook ansible-playbook ${path}/bin/ansible-playbook 0
 update-alternatives --install /usr/local/bin/ansible ansible ${path}/bin/ansible 0
