@@ -3,6 +3,7 @@
 
 ## Install ansible
 ```
+path=/opt/nset/py3
 pip3 install ansible
 ```
 CentOS
