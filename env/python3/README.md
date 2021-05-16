@@ -70,3 +70,10 @@ EOF
 ```
 pip3 install --upgrade pip
 ```
+
+## Quick fix
+Ubuntu
+```
+ln -s /usr/share/pyshared/lsb_release.py /opt/nset/py3/lib/python3.9/site-packages/
+sed -i 's@/usr/bin/python.*@/opt/nset/py3/bin/python3@g' /usr/bin/lsb_release
+```
