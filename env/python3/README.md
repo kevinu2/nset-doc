@@ -1,5 +1,5 @@
 ## Install compiler
-Debian
+Debian/Ubuntu
 ```
 apt-get -y install gcc make
 ```
@@ -9,7 +9,7 @@ yum -y install gcc make
 ```
 
 ## Install dependent packages
-Debian
+Debian/Ubuntu
 ```
 apt-get -y install libreadline-dev zlib1g-dev libffi-dev libssl-dev uuid-dev libgdbm-dev tk-dev libsqlite3-dev libbz2-dev liblzma-dev
 ```
@@ -20,7 +20,7 @@ yum -y install readline readline-devel zlib-devel libffi-devel openssl-devel bzi
 ## Donwload python source code
 ```
 version=3.9.5
-wget  https://www.python.org/ftp/python/${version}/Python-${version}.tar.xz
+wget -c https://www.python.org/ftp/python/${version}/Python-${version}.tar.xz
 tar Jxf Python-${version}.tar.xz
 cd Python-${version}
 ```
@@ -46,7 +46,7 @@ alternatives --install /usr/local/bin/pip${v} pip${v} ${path}/bin/pip${v} 0
 alternatives --install /usr/local/bin/python${vv} python${vv} ${path}/bin/python${vv} 0
 alternatives --install /usr/local/bin/pip${vv} pip${vv} ${path}/bin/pip${vv} 0
 ```
-Debian
+Debian/Ubuntu
 ```
 update-alternatives --install /usr/local/bin/python${v} python${v} ${path}/bin/python${v} 0
 update-alternatives --install /usr/local/bin/pip${v} pip${v} ${path}/bin/pip${v} 0
