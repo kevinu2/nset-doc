@@ -9,8 +9,9 @@
 ## Install ['nset-cli'](https://github.com/kevinu2/nset-cli)
 
 #### Opt 1. Setup hosts in ['inventory.ini'](https://github.com/kevinu2/nset-ansible/blob/master/inventory.ini.example)
-`cp inventory.ini.example inventory.ini`
-`vim inventory.ini`
+```
+cp inventory.ini.example inventory.ini
+vim inventory.ini
 ```
 [ntp_local]
 s1.nset
