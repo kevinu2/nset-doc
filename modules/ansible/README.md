@@ -13,6 +13,7 @@
 cp inventory.ini.example inventory.ini
 vim inventory.ini
 ```
+```
 [ntp_local]
 s1.nset
 
