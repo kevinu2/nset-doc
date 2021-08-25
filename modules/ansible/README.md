@@ -1,10 +1,10 @@
 ## Install 'ansible env'
 <https://github.com/kevinu2/nset-doc/tree/master/env/ansible>
 
-## Download 'nset-modules-ansible'
+## Download 'nset-ansible'
 `cd /opt`<br />
 `git clone https://github.com/kevinu2/nset-ansible.git`<br />
-`cd nset-modules-ansible`
+`cd nset-ansible`
 
 ## Install ['nset-cli'](https://github.com/kevinu2/nset-cli)
 
