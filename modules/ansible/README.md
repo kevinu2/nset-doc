@@ -8,6 +8,7 @@
 
 ## Install ['nset-cli'](https://github.com/kevinu2/nset-cli)
 
+## Config 'nset-ansible'
 #### Opt 1. Setup hosts in ['inventory.ini'](https://github.com/kevinu2/nset-ansible/blob/master/inventory.ini.example)
 ```
 cp inventory.ini.example inventory.ini
