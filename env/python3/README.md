@@ -34,7 +34,7 @@ make; make install
 
 ## Init bin path
 ```
-version=3.9.5
+version=3.9.6
 v=${version%%.*}
 vv=${version%.*}
 path=/opt/nset/py3
