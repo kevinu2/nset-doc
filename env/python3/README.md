@@ -19,7 +19,7 @@ yum -y install readline readline-devel zlib-devel libffi-devel openssl-devel bzi
 ```
 ## Donwload python source code
 ```
-version=3.9.5
+version=3.9.7
 wget -c https://www.python.org/ftp/python/${version}/Python-${version}.tar.xz
 tar Jxf Python-${version}.tar.xz
 cd Python-${version}
