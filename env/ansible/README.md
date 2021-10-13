@@ -3,7 +3,7 @@
 
 ## Install ansible
 ```
-path=/opt/nset/py3
+path=/opt/python3
 pip3 install ansible
 ```
 CentOS
@@ -36,10 +36,10 @@ python3 setup.py install
 
 ## Change default python env
 ```
-for py in `find /opt/nset/py3/lib/python3.9/site-packages -type f -name "*.py*"`; do
+for py in `find /opt/python3/lib/python3.9/site-packages -type f -name "*.py*"`; do
   if [ `grep '/usr/bin/python' $py -c` -gt 0 ]; then
     echo $py
-    sed -i 's@/usr/bin/python@/opt/nset/py3/bin/python3@g' $py
+    sed -i 's@/usr/bin/python@/opt/python3/bin/python3@g' $py
   fi
 done
 ```
