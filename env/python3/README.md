@@ -27,7 +27,7 @@ cd Python-${version}
 
 ## Configure, make & make install
 ```
-path=/opt/nset/py3
+path=/opt/python3
 ./configure --prefix=${path}
 make; make install
 ```
@@ -37,7 +37,7 @@ make; make install
 version=3.9.7
 v=${version%%.*}
 vv=${version%.*}
-path=/opt/nset/py3
+path=/opt/python3
 ```
 CentOS
 ```
@@ -74,6 +74,6 @@ pip3 install --upgrade pip
 ## Quick fix
 Ubuntu
 ```
-ln -s /usr/share/pyshared/lsb_release.py /opt/nset/py3/lib/python3.9/site-packages/
-sed -i 's@/usr/bin/python.*@/opt/nset/py3/bin/python3@g' /usr/bin/lsb_release
+ln -s /usr/share/pyshared/lsb_release.py /opt/python3/lib/python3.9/site-packages/
+sed -i 's@/usr/bin/python.*@/opt/python3/bin/python3@g' /usr/bin/lsb_release
 ```
