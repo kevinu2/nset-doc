@@ -19,7 +19,7 @@ yum -y install readline readline-devel zlib-devel libffi-devel openssl-devel bzi
 ```
 ## Donwload python source code
 ```
-version=3.9.7
+version=3.13.2
 wget -c https://www.python.org/ftp/python/${version}/Python-${version}.tar.xz
 tar Jxf Python-${version}.tar.xz
 cd Python-${version}
@@ -27,24 +27,19 @@ cd Python-${version}
 
 ## Configure, make & make install
 ```
+mkdir -pv /opt
 path=/opt/python3
-./configure --prefix=${path}
+./configure --prefix=${path} --enable-optimizations
 make; make install
 ```
 
 ## Init bin path
 ```
-version=3.9.7
+version=3.13.2
 v=${version%%.*}
 vv=${version%.*}
 path=/opt/python3
-```
-CentOS
-```
-alternatives --install /usr/local/bin/python${v} python${v} ${path}/bin/python${v} 0
-alternatives --install /usr/local/bin/pip${v} pip${v} ${path}/bin/pip${v} 0
-alternatives --install /usr/local/bin/python${vv} python${vv} ${path}/bin/python${vv} 0
-alternatives --install /usr/local/bin/pip${vv} pip${vv} ${path}/bin/pip${vv} 0
+mkdir -pv /usr/local/bin
 ```
 Debian/Ubuntu
 ```
@@ -53,7 +48,13 @@ update-alternatives --install /usr/local/bin/pip${v} pip${v} ${path}/bin/pip${v}
 update-alternatives --install /usr/local/bin/python${vv} python${vv} ${path}/bin/python${vv} 0
 update-alternatives --install /usr/local/bin/pip${vv} pip${vv} ${path}/bin/pip${vv} 0
 ```
-
+CentOS
+```
+alternatives --install /usr/local/bin/python${v} python${v} ${path}/bin/python${v} 0
+alternatives --install /usr/local/bin/pip${v} pip${v} ${path}/bin/pip${v} 0
+alternatives --install /usr/local/bin/python${vv} python${vv} ${path}/bin/python${vv} 0
+alternatives --install /usr/local/bin/pip${vv} pip${vv} ${path}/bin/pip${vv} 0
+```
 ## Change install source
 ```
 mkdir -p ~/.pip
@@ -74,6 +75,6 @@ pip3 install --upgrade pip
 ## Quick fix
 Ubuntu
 ```
-ln -s /usr/share/pyshared/lsb_release.py /opt/python3/lib/python3.9/site-packages/
+ln -s /usr/share/pyshared/lsb_release.py /opt/python3/lib/python3.13/site-packages/
 sed -i 's@/usr/bin/python.*@/opt/python3/bin/python3@g' /usr/bin/lsb_release
 ```
