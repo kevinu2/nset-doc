@@ -61,6 +61,8 @@ mkdir -p ~/.pip
 cat > ~/.pip/pip.conf << EOF
 [global]
 index-url = https://mirrors.aliyun.com/pypi/simple/
+root-user-action = ignore
+no-warn-script-location = true
 
 [install]
 trusted-host=mirrors.aliyun.com
