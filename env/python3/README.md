@@ -43,6 +43,8 @@ mkdir -pv /usr/local/bin
 ```
 Debian/Ubuntu
 ```
+update-alternatives --install /usr/local/bin/pip pip ${path}/bin/pip${v} 0
+update-alternatives --install /usr/local/bin/python python ${path}/bin/python${v} 0
 update-alternatives --install /usr/local/bin/python${v} python${v} ${path}/bin/python${v} 0
 update-alternatives --install /usr/local/bin/pip${v} pip${v} ${path}/bin/pip${v} 0
 update-alternatives --install /usr/local/bin/python${vv} python${vv} ${path}/bin/python${vv} 0
